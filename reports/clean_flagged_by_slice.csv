@@ -1,0 +1,5 @@
+run,clean_day_flagged,clean_dusk_flagged,clean_night_flagged,clean_cam_A_flagged,clean_cam_B_flagged
+baseline,0/10,1/2,2/8,0/14,3/6
+ablation_nonorm,0/10,0/2,0/8,0/14,0/6
+poc,0/10,0/2,0/8,0/14,0/6
+poc_v2,0/10,0/2,0/8,0/14,0/6

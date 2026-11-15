@@ -1,0 +1,45 @@
+{
+  "status": "HOLD",
+  "reason_code": "EVAL_PROXY_LABELS_SMALL_N",
+  "reason": "PoC dùng được làm bộ xếp hạng hỗ trợ review top-20 nhưng chưa đủ bằng chứng để tự động KEEP/RECAPTURE: số liệu tính bằng nhãn proxy trên eval nhỏ, chưa có GT chính thức hay kiểm out-of-domain.",
+  "owner": "TODO: tên người ký duyệt (role)",
+  "scope": "t02_raw_qc/eval",
+  "evidence": [
+    "reports/metrics_baseline.json",
+    "reports/metrics_poc.json",
+    "reports/table1_baseline_vs_poc.md",
+    "reports/review_queue.csv",
+    "reports/contact_sheet_top20.html",
+    "reports/failure_modes.png",
+    "configs/t02_params.json"
+  ],
+  "metrics": {
+    "n_eval": 40,
+    "B": 20,
+    "gt": "C:\\Users\\ThinkPad1\\Downloads\\K5-Day6-L2B-DamTranMinhQuang-2A202603336-DataGovernanceAndPrivacy\\fixtures\\t02_raw_qc\\proxy_gt\\labels.csv",
+    "recall_baseline": 0.85,
+    "recall_poc": 0.95,
+    "tp_baseline": 17,
+    "tp_poc": 19,
+    "n_defects_eval": 20,
+    "delta_images": 2,
+    "poc_false_alarm_by_light": {
+      "day": "1/10",
+      "dusk": "0/2",
+      "night": "0/8"
+    },
+    "caveats": [
+      "eval chỉ 40 ảnh (mỗi ảnh = 5% recall) – chênh vài ảnh chưa có ý nghĩa thống kê",
+      "thr_bloom (poc_v2) dựa trên 1 ví dụ dev và poc_v2 là post-hoc",
+      "chưa kiểm 10 ảnh out-of-domain",
+      "dev không có night × cam_A (mức chuẩn night là ngoại suy)"
+    ],
+    "next_to_flip_to_GO": [
+      "chấm bằng GT chính thức: python -m src.evaluate --track t02 --gt <gt/labels.csv> với Recall@20 PoC ≥ baseline",
+      "kiểm 10 ảnh out-of-domain không có false alarm hàng loạt",
+      "fit lại ngưỡng khi dev có ≥5 ảnh sạch mỗi cặp light × camera"
+    ]
+  },
+  "ts": "2026-11-15T17:13:12+00:00",
+  "canonical": "HOLD"
+}
