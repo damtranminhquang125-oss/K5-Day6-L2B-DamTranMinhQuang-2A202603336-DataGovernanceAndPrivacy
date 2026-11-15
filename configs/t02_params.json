@@ -1,0 +1,63 @@
+{
+  "a_light": {
+    "day": 7.089963733492664,
+    "dusk": 6.818540904043898,
+    "night": 7.6073137683911
+  },
+  "b_cam": {
+    "cam_A": 0.0,
+    "cam_B": -0.8863900510628664
+  },
+  "a_mean": 7.171939468642553,
+  "ref_lml": {
+    "day": 4.795837553939073,
+    "dusk": 4.500153305891761,
+    "night": 3.509253000268963
+  },
+  "ref_lml_mean": 4.2684146200332655,
+  "thr_bloom": 0.22775778860483298,
+  "bloom_fit": {
+    "clean_max_excess": 0.05141425102897834,
+    "n_dev_bloom_examples": 1,
+    "min_bloom_excess": 0.4041013261806876
+  },
+  "thr": {
+    "blur": 2.695380947932201,
+    "dark": 0.7733710540310483,
+    "glare": 0.06027777777777778,
+    "compression": 0.7748634219169617
+  },
+  "fit_report": {
+    "blur": {
+      "clean_max": 0.972638350584222,
+      "defect_min": 4.41812354528018,
+      "n_defect_dev": 8,
+      "rule": "midpoint(max clean, min defect)"
+    },
+    "dark": {
+      "clean_max": 0.0458645737918939,
+      "defect_min": 1.5008775342702028,
+      "n_defect_dev": 6,
+      "rule": "midpoint(max clean, min defect)"
+    },
+    "glare": {
+      "clean_max": 0.020833333333333332,
+      "defect_min": 0.09972222222222223,
+      "n_defect_dev": 4,
+      "rule": "midpoint(max clean, min defect)"
+    },
+    "compression": {
+      "clean_max": 0.6640868186950684,
+      "defect_min": 0.885640025138855,
+      "n_defect_dev": 10,
+      "rule": "midpoint(max clean, min defect)"
+    }
+  },
+  "baseline": {
+    "lap_var_threshold": 744.964111328125,
+    "dev_f1": 0.8421052631431211
+  },
+  "n_dev": 56,
+  "n_dev_clean": 28,
+  "seed": 42
+}
